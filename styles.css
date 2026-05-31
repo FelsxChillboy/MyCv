@@ -380,7 +380,8 @@ body {
 .profile-avatar-container {
     position: relative;
     width: 150px;
-    height: 190px; /* Rectangular profile photo profile standard */
+    height: auto;
+    aspect-ratio: 308 / 546;
     border-radius: var(--radius-md);
     margin-bottom: 20px;
 }
@@ -1327,7 +1328,8 @@ a.detail-value:hover {
 
     .profile-avatar-container {
         width: 120px;
-        height: 152px;
+        height: auto;
+        aspect-ratio: 308 / 546;
     }
 
     .profile-name {
@@ -1407,7 +1409,8 @@ a.detail-value:hover {
 
     .profile-avatar-container {
         width: 100px;
-        height: 130px;
+        height: auto;
+        aspect-ratio: 308 / 546;
     }
 
     .profile-name {
