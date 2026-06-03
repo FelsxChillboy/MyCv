@@ -1,0 +1,24 @@
+{
+  "name": "ahmad-azarruddin-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio website for Ahmad Azarruddin - Fullstack Developer & AI Agent Engineer",
+  "scripts": {
+    "build:css": "lightningcss --minify src/css/style.css -o dist/css/style.css",
+    "build:js": "esbuild src/js/script.js --bundle --minify --outfile=dist/js/script.js",
+    "build:html": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true -o dist/index.html src/index.html",
+    "build:404": "html-minifier-terser --collapse-whitespace --remove-comments -o dist/404.html src/404.html",
+    "build:assets": "mkdirp dist/assets && cpy src/assets/* dist/assets/",
+    "build": "npm run build:css && npm run build:js && npm run build:html && npm run build:404 && npm run build:assets",
+    "dev": "live-server src --port=3000 --open=/",
+    "preview": "live-server dist --port=8080 --open=/"
+  },
+  "devDependencies": {
+    "cpy-cli": "^5.0.0",
+    "esbuild": "^0.25.0",
+    "html-minifier-terser": "^7.2.0",
+    "lightningcss-cli": "^1.29.0",
+    "live-server": "^1.2.2",
+    "mkdirp": "^3.0.1"
+  }
+}
